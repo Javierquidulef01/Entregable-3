@@ -1,0 +1,14 @@
+{
+  "name": "poo_entregable3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "testeo": "node ./js-compilados/testeo.js",
+    "docu": "node ./js-compilados/Documento.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
