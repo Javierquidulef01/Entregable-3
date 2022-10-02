@@ -1,64 +1,52 @@
-import { Documento } from "./Documento";
-
-export class Alumno {
-    private nombre: string;
-    private apellido: string;
-    private documento: Documento;
-    private nota: number;
-    private aprobado: boolean;
-
-    constructor(nombre: string, apellido: string, documento: Documento, nota: number) {
+"use strict";
+exports.__esModule = true;
+exports.Alumno = void 0;
+var Alumno = /** @class */ (function () {
+    function Alumno(nombre, apellido, documento, nota) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.documento = documento;
         this.nota = nota;
         this.aprobado = nota > 7;
     }
-
     // Metodos Getters y Setters
-
-    public getNombre(): string {
+    Alumno.prototype.getNombre = function () {
         return this.nombre;
-    }
-    public setNombre(nombre: string): void {
+    };
+    Alumno.prototype.setNombre = function (nombre) {
         this.nombre = nombre;
-    }
-
-    public getApellido(): string {
+    };
+    Alumno.prototype.getApellido = function () {
         return this.apellido;
-    }
-    public setApellido(apellido: string): void {
+    };
+    Alumno.prototype.setApellido = function (apellido) {
         this.apellido = apellido;
-    }
-
-    public getDocumento(): Documento {
+    };
+    Alumno.prototype.getDocumento = function () {
         return this.documento;
-    }
-    public setDocumento(documento: Documento): void {
+    };
+    Alumno.prototype.setDocumento = function (documento) {
         this.documento = documento;
-    }
-
-    public getNota(): number {
+    };
+    Alumno.prototype.getNota = function () {
         return this.nota;
-    }
-    public setNota(nota: number): void {
+    };
+    Alumno.prototype.setNota = function (nota) {
         if (this.nota >= 1 || this.nota <= 10) {
             this.nota = nota;
-        } else {
+        }
+        else {
             console.log("ERROR! La nota debe ser un número entre 1 y 10");
         }
-    }
-
-    public isAprobado(): boolean {
+    };
+    Alumno.prototype.isAprobado = function () {
         return this.aprobado;
-    }
-}
-
-
+    };
+    return Alumno;
+}());
+exports.Alumno = Alumno;
 /* --------------------------------------------------------------------------------- */
-
 // let doc1 = new Documento("DNI", "31010912");
 // console.log(doc1);
 // let alumno1 = new Alumno("Lucas","Fernandez", doc1, 1);
-
 // console.log(alumno1);

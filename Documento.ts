@@ -1,23 +1,23 @@
 export class Documento {
-    private tipoDocumento:string; //DNI, LE, CI, PAS
-    private nroDocumento:string;
+    private tipoDocumento: string; //DNI, LE, CI, PAS
+    private nroDocumento: string;
 
-    constructor(tipoDocumento:string, nroDocumento:string) {
+    constructor(tipoDocumento: string, nroDocumento: string) {
         this.tipoDocumento = tipoDocumento;
         this.nroDocumento = nroDocumento;
     }
 
-    public setTipoDocumento(tipoDocumento:string):void {
+    public setTipoDocumento(tipoDocumento: string): void {
         this.tipoDocumento = tipoDocumento;
     }
-    public getTipoDocumento():string {
+    public getTipoDocumento(): string {
         return this.tipoDocumento;
     }
 
-    public setNroDocumenot(nroDocumento:string):void {
+    public setNroDocumenot(nroDocumento: string): void {
         this.nroDocumento = nroDocumento;
     }
-    public getNroDocumento():string {
+    public getNroDocumento(): string {
         return this.nroDocumento;
     }
 }
