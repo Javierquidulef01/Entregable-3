@@ -1,13 +1,9 @@
-import { Documento } from "./Documento";
-import { Alumno } from "./Alumno";
-
-export class Profesor {
-    private nombre: string;
-    private apellido: string;
-    private documento: Documento;
-    private alumnos: Alumno[] = [];
-
-    constructor(nombre: string, apellido: string, documento: Documento, alumnos?: Alumno[]) {
+"use strict";
+exports.__esModule = true;
+exports.Profesor = void 0;
+var Profesor = /** @class */ (function () {
+    function Profesor(nombre, apellido, documento, alumnos) {
+        this.alumnos = [];
         this.nombre = nombre;
         this.apellido = apellido;
         this.documento = documento;
@@ -15,48 +11,42 @@ export class Profesor {
             this.setAlumnos(alumnos);
         }
     }
-
     /* Metodos Getters y Setters */
-    public getNombre(): string {
+    Profesor.prototype.getNombre = function () {
         return this.nombre;
-    }
-    public setNombre(nombre: string): void {
+    };
+    Profesor.prototype.setNombre = function (nombre) {
         this.nombre = nombre;
-    }
-
-    public getApellido(): string {
+    };
+    Profesor.prototype.getApellido = function () {
         return this.apellido;
-    }
-    public setApellido(apellido: string): void {
+    };
+    Profesor.prototype.setApellido = function (apellido) {
         this.apellido = apellido;
-    }
-
-    public getDocumento(): Documento {
+    };
+    Profesor.prototype.getDocumento = function () {
         return this.documento;
-    }
-    public setDocumento(documento: Documento): void {
+    };
+    Profesor.prototype.setDocumento = function (documento) {
         this.documento = documento;
-    }
-
-    public getAlumnos(): Alumno[] {
+    };
+    Profesor.prototype.getAlumnos = function () {
         return this.alumnos;
-    }
-
-    public setAlumnos(alumnos: Alumno[]): void {
+    };
+    Profesor.prototype.setAlumnos = function (alumnos) {
         if (this.alumnos == undefined) {
             this.alumnos = alumnos;
-        } else {
+        }
+        else {
             // console.log(alumnos)
-            for (let i: number = 0; i < alumnos.length; i++) {
+            for (var i = 0; i < alumnos.length; i++) {
                 this.alumnos.push(alumnos[i]);
-
             }
         }
-
-    }
-}
-
-
+    };
+    return Profesor;
+}());
+exports.Profesor = Profesor;
 /*--------------------------------------------------------------------------------------------------- */
 /*
 let a1:Alumno= new Alumno("user1","apellidoUser1",new Documento("DNI","12341231"),7);
@@ -84,4 +74,4 @@ arregloA = [a6];
 profesor.setAlumnos(arregloA);
 
 console.log(profesor);
-*/
+*/ 
